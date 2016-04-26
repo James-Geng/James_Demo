@@ -7,6 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		916369E31CCF19CC0057CCE8 /* weeklyTitle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 916369E21CCF19CC0057CCE8 /* weeklyTitle@2x.png */; };
+		91636A031CCF3EE90057CCE8 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 916369E61CCF3EE90057CCE8 /* NSData+Base64.m */; };
+		91636A041CCF3EE90057CCE8 /* NSDate+Hour_Minute.m in Sources */ = {isa = PBXBuildFile; fileRef = 916369E81CCF3EE90057CCE8 /* NSDate+Hour_Minute.m */; };
+		91636A051CCF3EE90057CCE8 /* NSString+common.m in Sources */ = {isa = PBXBuildFile; fileRef = 916369EA1CCF3EE90057CCE8 /* NSString+common.m */; };
+		91636A071CCF3EE90057CCE8 /* NSString+urlencode.m in Sources */ = {isa = PBXBuildFile; fileRef = 916369EE1CCF3EE90057CCE8 /* NSString+urlencode.m */; };
+		91636A091CCF3EE90057CCE8 /* UIAlertView+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 916369F21CCF3EE90057CCE8 /* UIAlertView+Blocks.m */; };
+		91636A0A1CCF3EE90057CCE8 /* UIBarButtonItem+IW.m in Sources */ = {isa = PBXBuildFile; fileRef = 916369F41CCF3EE90057CCE8 /* UIBarButtonItem+IW.m */; };
+		91636A0B1CCF3EE90057CCE8 /* UIButton+CustomBG.m in Sources */ = {isa = PBXBuildFile; fileRef = 916369F61CCF3EE90057CCE8 /* UIButton+CustomBG.m */; };
+		91636A0C1CCF3EE90057CCE8 /* UIDevice+Resolutions.m in Sources */ = {isa = PBXBuildFile; fileRef = 916369F81CCF3EE90057CCE8 /* UIDevice+Resolutions.m */; };
+		91636A0E1CCF3EE90057CCE8 /* UIImage+UIImageScale.m in Sources */ = {isa = PBXBuildFile; fileRef = 916369FC1CCF3EE90057CCE8 /* UIImage+UIImageScale.m */; };
+		91636A0F1CCF3EE90057CCE8 /* UIImageView+IDTextImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 916369FE1CCF3EE90057CCE8 /* UIImageView+IDTextImageView.m */; };
+		91636A211CCF3FD60057CCE8 /* NSString+Hashes.m in Sources */ = {isa = PBXBuildFile; fileRef = 91636A141CCF3FD60057CCE8 /* NSString+Hashes.m */; };
+		91636A221CCF3FD60057CCE8 /* NSString+MD5Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 91636A161CCF3FD60057CCE8 /* NSString+MD5Addition.m */; };
+		91636A231CCF3FD60057CCE8 /* NSString+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 91636A181CCF3FD60057CCE8 /* NSString+Utils.m */; };
+		91636A241CCF3FD60057CCE8 /* UIColor+ColorWithHex.m in Sources */ = {isa = PBXBuildFile; fileRef = 91636A1A1CCF3FD60057CCE8 /* UIColor+ColorWithHex.m */; };
+		91636A261CCF3FD60057CCE8 /* UIDevice-Hardware.m in Sources */ = {isa = PBXBuildFile; fileRef = 91636A1E1CCF3FD60057CCE8 /* UIDevice-Hardware.m */; };
+		91636A271CCF3FD60057CCE8 /* UIView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 91636A201CCF3FD60057CCE8 /* UIView+Additions.m */; };
+		91636A381CCF6B0C0057CCE8 /* NSDate+WQCalendarLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = 91636A2B1CCF6B0C0057CCE8 /* NSDate+WQCalendarLogic.m */; };
+		91636A391CCF6B0C0057CCE8 /* WQCalendarDay.m in Sources */ = {isa = PBXBuildFile; fileRef = 91636A2D1CCF6B0C0057CCE8 /* WQCalendarDay.m */; };
+		91636A3A1CCF6B0C0057CCE8 /* WQCalendarGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 91636A2F1CCF6B0C0057CCE8 /* WQCalendarGridView.m */; };
+		91636A3B1CCF6B0C0057CCE8 /* WQCalendarLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = 91636A311CCF6B0C0057CCE8 /* WQCalendarLogic.m */; };
+		91636A3C1CCF6B0C0057CCE8 /* WQCalendarTileView.m in Sources */ = {isa = PBXBuildFile; fileRef = 91636A331CCF6B0C0057CCE8 /* WQCalendarTileView.m */; };
+		91636A3D1CCF6B0C0057CCE8 /* WQCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 91636A351CCF6B0C0057CCE8 /* WQCalendarView.m */; };
+		91636A3E1CCF6B0C0057CCE8 /* WQDraggableCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 91636A371CCF6B0C0057CCE8 /* WQDraggableCalendarView.m */; };
+		91636A421CCF6BDA0057CCE8 /* ESSelectedDateAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 91636A411CCF6BDA0057CCE8 /* ESSelectedDateAlertView.m */; };
+		91636A441CCF6BEC0057CCE8 /* ESSelectedDateAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91636A431CCF6BEC0057CCE8 /* ESSelectedDateAlertView.xib */; };
 		919388C71CCA0E5900CEE59C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 919388C61CCA0E5900CEE59C /* main.m */; };
 		919388CA1CCA0E5900CEE59C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 919388C91CCA0E5900CEE59C /* AppDelegate.m */; };
 		919388CD1CCA0E5900CEE59C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 919388CC1CCA0E5900CEE59C /* ViewController.m */; };
@@ -14,13 +40,6 @@
 		919388D21CCA0E5900CEE59C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 919388D11CCA0E5900CEE59C /* Assets.xcassets */; };
 		919388D51CCA0E5900CEE59C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 919388D31CCA0E5900CEE59C /* LaunchScreen.storyboard */; };
 		919388E01CCA0E5900CEE59C /* James_DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 919388DF1CCA0E5900CEE59C /* James_DemoTests.m */; };
-		919388F91CCA2D4900CEE59C /* NSDate+WQCalendarLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = 919388EC1CCA2D4900CEE59C /* NSDate+WQCalendarLogic.m */; };
-		919388FA1CCA2D4900CEE59C /* WQCalendarDay.m in Sources */ = {isa = PBXBuildFile; fileRef = 919388EE1CCA2D4900CEE59C /* WQCalendarDay.m */; };
-		919388FB1CCA2D4900CEE59C /* WQCalendarGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 919388F01CCA2D4900CEE59C /* WQCalendarGridView.m */; };
-		919388FC1CCA2D4900CEE59C /* WQCalendarLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = 919388F21CCA2D4900CEE59C /* WQCalendarLogic.m */; };
-		919388FD1CCA2D4900CEE59C /* WQCalendarTileView.m in Sources */ = {isa = PBXBuildFile; fileRef = 919388F41CCA2D4900CEE59C /* WQCalendarTileView.m */; };
-		919388FE1CCA2D4900CEE59C /* WQCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 919388F61CCA2D4900CEE59C /* WQCalendarView.m */; };
-		919388FF1CCA2D4900CEE59C /* WQDraggableCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 919388F81CCA2D4900CEE59C /* WQDraggableCalendarView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +53,57 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		916369E21CCF19CC0057CCE8 /* weeklyTitle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weeklyTitle@2x.png"; sourceTree = "<group>"; };
+		916369E51CCF3EE90057CCE8 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		916369E61CCF3EE90057CCE8 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		916369E71CCF3EE90057CCE8 /* NSDate+Hour_Minute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Hour_Minute.h"; sourceTree = "<group>"; };
+		916369E81CCF3EE90057CCE8 /* NSDate+Hour_Minute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Hour_Minute.m"; sourceTree = "<group>"; };
+		916369E91CCF3EE90057CCE8 /* NSString+common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+common.h"; sourceTree = "<group>"; };
+		916369EA1CCF3EE90057CCE8 /* NSString+common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+common.m"; sourceTree = "<group>"; };
+		916369ED1CCF3EE90057CCE8 /* NSString+urlencode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+urlencode.h"; sourceTree = "<group>"; };
+		916369EE1CCF3EE90057CCE8 /* NSString+urlencode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+urlencode.m"; sourceTree = "<group>"; };
+		916369F11CCF3EE90057CCE8 /* UIAlertView+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Blocks.h"; sourceTree = "<group>"; };
+		916369F21CCF3EE90057CCE8 /* UIAlertView+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Blocks.m"; sourceTree = "<group>"; };
+		916369F31CCF3EE90057CCE8 /* UIBarButtonItem+IW.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+IW.h"; sourceTree = "<group>"; };
+		916369F41CCF3EE90057CCE8 /* UIBarButtonItem+IW.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+IW.m"; sourceTree = "<group>"; };
+		916369F51CCF3EE90057CCE8 /* UIButton+CustomBG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+CustomBG.h"; sourceTree = "<group>"; };
+		916369F61CCF3EE90057CCE8 /* UIButton+CustomBG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CustomBG.m"; sourceTree = "<group>"; };
+		916369F71CCF3EE90057CCE8 /* UIDevice+Resolutions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Resolutions.h"; sourceTree = "<group>"; };
+		916369F81CCF3EE90057CCE8 /* UIDevice+Resolutions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Resolutions.m"; sourceTree = "<group>"; };
+		916369FB1CCF3EE90057CCE8 /* UIImage+UIImageScale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+UIImageScale.h"; sourceTree = "<group>"; };
+		916369FC1CCF3EE90057CCE8 /* UIImage+UIImageScale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+UIImageScale.m"; sourceTree = "<group>"; };
+		916369FD1CCF3EE90057CCE8 /* UIImageView+IDTextImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+IDTextImageView.h"; sourceTree = "<group>"; };
+		916369FE1CCF3EE90057CCE8 /* UIImageView+IDTextImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+IDTextImageView.m"; sourceTree = "<group>"; };
+		91636A131CCF3FD60057CCE8 /* NSString+Hashes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hashes.h"; sourceTree = "<group>"; };
+		91636A141CCF3FD60057CCE8 /* NSString+Hashes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hashes.m"; sourceTree = "<group>"; };
+		91636A151CCF3FD60057CCE8 /* NSString+MD5Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5Addition.h"; sourceTree = "<group>"; };
+		91636A161CCF3FD60057CCE8 /* NSString+MD5Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5Addition.m"; sourceTree = "<group>"; };
+		91636A171CCF3FD60057CCE8 /* NSString+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Utils.h"; sourceTree = "<group>"; };
+		91636A181CCF3FD60057CCE8 /* NSString+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Utils.m"; sourceTree = "<group>"; };
+		91636A191CCF3FD60057CCE8 /* UIColor+ColorWithHex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ColorWithHex.h"; sourceTree = "<group>"; };
+		91636A1A1CCF3FD60057CCE8 /* UIColor+ColorWithHex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ColorWithHex.m"; sourceTree = "<group>"; };
+		91636A1D1CCF3FD60057CCE8 /* UIDevice-Hardware.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice-Hardware.h"; sourceTree = "<group>"; };
+		91636A1E1CCF3FD60057CCE8 /* UIDevice-Hardware.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice-Hardware.m"; sourceTree = "<group>"; };
+		91636A1F1CCF3FD60057CCE8 /* UIView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Additions.h"; sourceTree = "<group>"; };
+		91636A201CCF3FD60057CCE8 /* UIView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Additions.m"; sourceTree = "<group>"; };
+		91636A281CCF41360057CCE8 /* James_Demo.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = James_Demo.pch; sourceTree = "<group>"; };
+		91636A2A1CCF6B0C0057CCE8 /* NSDate+WQCalendarLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+WQCalendarLogic.h"; sourceTree = "<group>"; };
+		91636A2B1CCF6B0C0057CCE8 /* NSDate+WQCalendarLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+WQCalendarLogic.m"; sourceTree = "<group>"; };
+		91636A2C1CCF6B0C0057CCE8 /* WQCalendarDay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQCalendarDay.h; sourceTree = "<group>"; };
+		91636A2D1CCF6B0C0057CCE8 /* WQCalendarDay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQCalendarDay.m; sourceTree = "<group>"; };
+		91636A2E1CCF6B0C0057CCE8 /* WQCalendarGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQCalendarGridView.h; sourceTree = "<group>"; };
+		91636A2F1CCF6B0C0057CCE8 /* WQCalendarGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQCalendarGridView.m; sourceTree = "<group>"; };
+		91636A301CCF6B0C0057CCE8 /* WQCalendarLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQCalendarLogic.h; sourceTree = "<group>"; };
+		91636A311CCF6B0C0057CCE8 /* WQCalendarLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQCalendarLogic.m; sourceTree = "<group>"; };
+		91636A321CCF6B0C0057CCE8 /* WQCalendarTileView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQCalendarTileView.h; sourceTree = "<group>"; };
+		91636A331CCF6B0C0057CCE8 /* WQCalendarTileView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQCalendarTileView.m; sourceTree = "<group>"; };
+		91636A341CCF6B0C0057CCE8 /* WQCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQCalendarView.h; sourceTree = "<group>"; };
+		91636A351CCF6B0C0057CCE8 /* WQCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQCalendarView.m; sourceTree = "<group>"; };
+		91636A361CCF6B0C0057CCE8 /* WQDraggableCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQDraggableCalendarView.h; sourceTree = "<group>"; };
+		91636A371CCF6B0C0057CCE8 /* WQDraggableCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQDraggableCalendarView.m; sourceTree = "<group>"; };
+		91636A401CCF6BDA0057CCE8 /* ESSelectedDateAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESSelectedDateAlertView.h; sourceTree = "<group>"; };
+		91636A411CCF6BDA0057CCE8 /* ESSelectedDateAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESSelectedDateAlertView.m; sourceTree = "<group>"; };
+		91636A431CCF6BEC0057CCE8 /* ESSelectedDateAlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ESSelectedDateAlertView.xib; sourceTree = "<group>"; };
 		919388C21CCA0E5900CEE59C /* James_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = James_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		919388C61CCA0E5900CEE59C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		919388C81CCA0E5900CEE59C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -47,20 +117,6 @@
 		919388DB1CCA0E5900CEE59C /* James_DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = James_DemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		919388DF1CCA0E5900CEE59C /* James_DemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = James_DemoTests.m; sourceTree = "<group>"; };
 		919388E11CCA0E5900CEE59C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		919388EB1CCA2D4900CEE59C /* NSDate+WQCalendarLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+WQCalendarLogic.h"; path = "WQCalendar/NSDate+WQCalendarLogic.h"; sourceTree = "<group>"; };
-		919388EC1CCA2D4900CEE59C /* NSDate+WQCalendarLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+WQCalendarLogic.m"; path = "WQCalendar/NSDate+WQCalendarLogic.m"; sourceTree = "<group>"; };
-		919388ED1CCA2D4900CEE59C /* WQCalendarDay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WQCalendarDay.h; path = WQCalendar/WQCalendarDay.h; sourceTree = "<group>"; };
-		919388EE1CCA2D4900CEE59C /* WQCalendarDay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WQCalendarDay.m; path = WQCalendar/WQCalendarDay.m; sourceTree = "<group>"; };
-		919388EF1CCA2D4900CEE59C /* WQCalendarGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WQCalendarGridView.h; path = WQCalendar/WQCalendarGridView.h; sourceTree = "<group>"; };
-		919388F01CCA2D4900CEE59C /* WQCalendarGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WQCalendarGridView.m; path = WQCalendar/WQCalendarGridView.m; sourceTree = "<group>"; };
-		919388F11CCA2D4900CEE59C /* WQCalendarLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WQCalendarLogic.h; path = WQCalendar/WQCalendarLogic.h; sourceTree = "<group>"; };
-		919388F21CCA2D4900CEE59C /* WQCalendarLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WQCalendarLogic.m; path = WQCalendar/WQCalendarLogic.m; sourceTree = "<group>"; };
-		919388F31CCA2D4900CEE59C /* WQCalendarTileView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WQCalendarTileView.h; path = WQCalendar/WQCalendarTileView.h; sourceTree = "<group>"; };
-		919388F41CCA2D4900CEE59C /* WQCalendarTileView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WQCalendarTileView.m; path = WQCalendar/WQCalendarTileView.m; sourceTree = "<group>"; };
-		919388F51CCA2D4900CEE59C /* WQCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WQCalendarView.h; path = WQCalendar/WQCalendarView.h; sourceTree = "<group>"; };
-		919388F61CCA2D4900CEE59C /* WQCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WQCalendarView.m; path = WQCalendar/WQCalendarView.m; sourceTree = "<group>"; };
-		919388F71CCA2D4900CEE59C /* WQDraggableCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WQDraggableCalendarView.h; path = WQCalendar/WQDraggableCalendarView.h; sourceTree = "<group>"; };
-		919388F81CCA2D4900CEE59C /* WQDraggableCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WQDraggableCalendarView.m; path = WQCalendar/WQDraggableCalendarView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +137,83 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		916369E41CCF3EE90057CCE8 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				916369E51CCF3EE90057CCE8 /* NSData+Base64.h */,
+				916369E61CCF3EE90057CCE8 /* NSData+Base64.m */,
+				916369E71CCF3EE90057CCE8 /* NSDate+Hour_Minute.h */,
+				916369E81CCF3EE90057CCE8 /* NSDate+Hour_Minute.m */,
+				916369E91CCF3EE90057CCE8 /* NSString+common.h */,
+				916369EA1CCF3EE90057CCE8 /* NSString+common.m */,
+				916369ED1CCF3EE90057CCE8 /* NSString+urlencode.h */,
+				916369EE1CCF3EE90057CCE8 /* NSString+urlencode.m */,
+				916369F11CCF3EE90057CCE8 /* UIAlertView+Blocks.h */,
+				916369F21CCF3EE90057CCE8 /* UIAlertView+Blocks.m */,
+				916369F31CCF3EE90057CCE8 /* UIBarButtonItem+IW.h */,
+				916369F41CCF3EE90057CCE8 /* UIBarButtonItem+IW.m */,
+				916369F51CCF3EE90057CCE8 /* UIButton+CustomBG.h */,
+				916369F61CCF3EE90057CCE8 /* UIButton+CustomBG.m */,
+				916369F71CCF3EE90057CCE8 /* UIDevice+Resolutions.h */,
+				916369F81CCF3EE90057CCE8 /* UIDevice+Resolutions.m */,
+				916369FB1CCF3EE90057CCE8 /* UIImage+UIImageScale.h */,
+				916369FC1CCF3EE90057CCE8 /* UIImage+UIImageScale.m */,
+				916369FD1CCF3EE90057CCE8 /* UIImageView+IDTextImageView.h */,
+				916369FE1CCF3EE90057CCE8 /* UIImageView+IDTextImageView.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		91636A121CCF3FD60057CCE8 /* CommonToolClasses */ = {
+			isa = PBXGroup;
+			children = (
+				91636A131CCF3FD60057CCE8 /* NSString+Hashes.h */,
+				91636A141CCF3FD60057CCE8 /* NSString+Hashes.m */,
+				91636A151CCF3FD60057CCE8 /* NSString+MD5Addition.h */,
+				91636A161CCF3FD60057CCE8 /* NSString+MD5Addition.m */,
+				91636A171CCF3FD60057CCE8 /* NSString+Utils.h */,
+				91636A181CCF3FD60057CCE8 /* NSString+Utils.m */,
+				91636A191CCF3FD60057CCE8 /* UIColor+ColorWithHex.h */,
+				91636A1A1CCF3FD60057CCE8 /* UIColor+ColorWithHex.m */,
+				91636A1D1CCF3FD60057CCE8 /* UIDevice-Hardware.h */,
+				91636A1E1CCF3FD60057CCE8 /* UIDevice-Hardware.m */,
+				91636A1F1CCF3FD60057CCE8 /* UIView+Additions.h */,
+				91636A201CCF3FD60057CCE8 /* UIView+Additions.m */,
+			);
+			path = CommonToolClasses;
+			sourceTree = "<group>";
+		};
+		91636A291CCF6B0C0057CCE8 /* WQCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				91636A2A1CCF6B0C0057CCE8 /* NSDate+WQCalendarLogic.h */,
+				91636A2B1CCF6B0C0057CCE8 /* NSDate+WQCalendarLogic.m */,
+				91636A2C1CCF6B0C0057CCE8 /* WQCalendarDay.h */,
+				91636A2D1CCF6B0C0057CCE8 /* WQCalendarDay.m */,
+				91636A2E1CCF6B0C0057CCE8 /* WQCalendarGridView.h */,
+				91636A2F1CCF6B0C0057CCE8 /* WQCalendarGridView.m */,
+				91636A301CCF6B0C0057CCE8 /* WQCalendarLogic.h */,
+				91636A311CCF6B0C0057CCE8 /* WQCalendarLogic.m */,
+				91636A321CCF6B0C0057CCE8 /* WQCalendarTileView.h */,
+				91636A331CCF6B0C0057CCE8 /* WQCalendarTileView.m */,
+				91636A341CCF6B0C0057CCE8 /* WQCalendarView.h */,
+				91636A351CCF6B0C0057CCE8 /* WQCalendarView.m */,
+				91636A361CCF6B0C0057CCE8 /* WQDraggableCalendarView.h */,
+				91636A371CCF6B0C0057CCE8 /* WQDraggableCalendarView.m */,
+			);
+			path = WQCalendar;
+			sourceTree = "<group>";
+		};
+		91636A3F1CCF6BA70057CCE8 /* ESSelectedDateAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				91636A401CCF6BDA0057CCE8 /* ESSelectedDateAlertView.h */,
+				91636A411CCF6BDA0057CCE8 /* ESSelectedDateAlertView.m */,
+				91636A431CCF6BEC0057CCE8 /* ESSelectedDateAlertView.xib */,
+			);
+			path = ESSelectedDateAlertView;
+			sourceTree = "<group>";
+		};
 		919388B91CCA0E5900CEE59C = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +235,9 @@
 		919388C41CCA0E5900CEE59C /* James_Demo */ = {
 			isa = PBXGroup;
 			children = (
+				91636A121CCF3FD60057CCE8 /* CommonToolClasses */,
+				916369E41CCF3EE90057CCE8 /* Category */,
+				916369E21CCF19CC0057CCE8 /* weeklyTitle@2x.png */,
 				919388EA1CCA0FD500CEE59C /* CustomViews */,
 				919388C81CCA0E5900CEE59C /* AppDelegate.h */,
 				919388C91CCA0E5900CEE59C /* AppDelegate.m */,
@@ -120,6 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				919388C61CCA0E5900CEE59C /* main.m */,
+				91636A281CCF41360057CCE8 /* James_Demo.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -136,20 +273,8 @@
 		919388EA1CCA0FD500CEE59C /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
-				919388EB1CCA2D4900CEE59C /* NSDate+WQCalendarLogic.h */,
-				919388EC1CCA2D4900CEE59C /* NSDate+WQCalendarLogic.m */,
-				919388ED1CCA2D4900CEE59C /* WQCalendarDay.h */,
-				919388EE1CCA2D4900CEE59C /* WQCalendarDay.m */,
-				919388EF1CCA2D4900CEE59C /* WQCalendarGridView.h */,
-				919388F01CCA2D4900CEE59C /* WQCalendarGridView.m */,
-				919388F11CCA2D4900CEE59C /* WQCalendarLogic.h */,
-				919388F21CCA2D4900CEE59C /* WQCalendarLogic.m */,
-				919388F31CCA2D4900CEE59C /* WQCalendarTileView.h */,
-				919388F41CCA2D4900CEE59C /* WQCalendarTileView.m */,
-				919388F51CCA2D4900CEE59C /* WQCalendarView.h */,
-				919388F61CCA2D4900CEE59C /* WQCalendarView.m */,
-				919388F71CCA2D4900CEE59C /* WQDraggableCalendarView.h */,
-				919388F81CCA2D4900CEE59C /* WQDraggableCalendarView.m */,
+				91636A3F1CCF6BA70057CCE8 /* ESSelectedDateAlertView */,
+				91636A291CCF6B0C0057CCE8 /* WQCalendar */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -234,8 +359,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91636A441CCF6BEC0057CCE8 /* ESSelectedDateAlertView.xib in Resources */,
 				919388D51CCA0E5900CEE59C /* LaunchScreen.storyboard in Resources */,
 				919388D21CCA0E5900CEE59C /* Assets.xcassets in Resources */,
+				916369E31CCF19CC0057CCE8 /* weeklyTitle@2x.png in Resources */,
 				919388D01CCA0E5900CEE59C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,16 +381,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91636A091CCF3EE90057CCE8 /* UIAlertView+Blocks.m in Sources */,
+				91636A381CCF6B0C0057CCE8 /* NSDate+WQCalendarLogic.m in Sources */,
+				91636A3C1CCF6B0C0057CCE8 /* WQCalendarTileView.m in Sources */,
+				91636A3A1CCF6B0C0057CCE8 /* WQCalendarGridView.m in Sources */,
 				919388CD1CCA0E5900CEE59C /* ViewController.m in Sources */,
-				919388FC1CCA2D4900CEE59C /* WQCalendarLogic.m in Sources */,
-				919388FD1CCA2D4900CEE59C /* WQCalendarTileView.m in Sources */,
-				919388F91CCA2D4900CEE59C /* NSDate+WQCalendarLogic.m in Sources */,
-				919388FA1CCA2D4900CEE59C /* WQCalendarDay.m in Sources */,
+				91636A0B1CCF3EE90057CCE8 /* UIButton+CustomBG.m in Sources */,
+				91636A0A1CCF3EE90057CCE8 /* UIBarButtonItem+IW.m in Sources */,
+				91636A031CCF3EE90057CCE8 /* NSData+Base64.m in Sources */,
+				91636A041CCF3EE90057CCE8 /* NSDate+Hour_Minute.m in Sources */,
+				91636A211CCF3FD60057CCE8 /* NSString+Hashes.m in Sources */,
+				91636A241CCF3FD60057CCE8 /* UIColor+ColorWithHex.m in Sources */,
 				919388CA1CCA0E5900CEE59C /* AppDelegate.m in Sources */,
-				919388FB1CCA2D4900CEE59C /* WQCalendarGridView.m in Sources */,
-				919388FE1CCA2D4900CEE59C /* WQCalendarView.m in Sources */,
-				919388FF1CCA2D4900CEE59C /* WQDraggableCalendarView.m in Sources */,
+				91636A221CCF3FD60057CCE8 /* NSString+MD5Addition.m in Sources */,
+				91636A3B1CCF6B0C0057CCE8 /* WQCalendarLogic.m in Sources */,
+				91636A051CCF3EE90057CCE8 /* NSString+common.m in Sources */,
+				91636A421CCF6BDA0057CCE8 /* ESSelectedDateAlertView.m in Sources */,
+				91636A231CCF3FD60057CCE8 /* NSString+Utils.m in Sources */,
+				91636A3E1CCF6B0C0057CCE8 /* WQDraggableCalendarView.m in Sources */,
+				91636A0C1CCF3EE90057CCE8 /* UIDevice+Resolutions.m in Sources */,
+				91636A071CCF3EE90057CCE8 /* NSString+urlencode.m in Sources */,
+				91636A3D1CCF6B0C0057CCE8 /* WQCalendarView.m in Sources */,
+				91636A261CCF3FD60057CCE8 /* UIDevice-Hardware.m in Sources */,
+				91636A271CCF3FD60057CCE8 /* UIView+Additions.m in Sources */,
+				91636A0E1CCF3EE90057CCE8 /* UIImage+UIImageScale.m in Sources */,
 				919388C71CCA0E5900CEE59C /* main.m in Sources */,
+				91636A0F1CCF3EE90057CCE8 /* UIImageView+IDTextImageView.m in Sources */,
+				91636A391CCF6B0C0057CCE8 /* WQCalendarDay.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,6 +475,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREFIX_HEADER = James_Demo/James_Demo.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -373,6 +518,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = James_Demo/James_Demo.pch;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -452,6 +598,7 @@
 				919388E61CCA0E5900CEE59C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		919388E71CCA0E5900CEE59C /* Build configuration list for PBXNativeTarget "James_DemoTests" */ = {
 			isa = XCConfigurationList;
@@ -460,6 +607,7 @@
 				919388E91CCA0E5900CEE59C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

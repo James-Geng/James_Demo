@@ -1,0 +1,26 @@
+//
+//  James_Demo.pch
+//  James_Demo
+//
+//  Created by sycf_ios on 16/4/26.
+//  Copyright © 2016年 sycf_ios. All rights reserved.
+//
+
+#ifndef James_Demo_pch
+#define James_Demo_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file
+
+#import "UIColor+ColorWithHex.h"
+#import "UIView+Additions.h"
+
+#import "UIView+Additions.h"
+#import "UIImage+UIImageScale.h"
+#import "NSDate+Hour_Minute.h"
+#import "UIButton+CustomBG.h"
+#import "UIImageView+IDTextImageView.h"
+#import "UIAlertView+Blocks.h"
+#import "UIDevice+Resolutions.h"
+
+#endif /* James_Demo_pch */

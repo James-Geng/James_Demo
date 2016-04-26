@@ -24,7 +24,13 @@ typedef enum _WQCalendarTileStyle WQCalendarTileStyle;
 
 @property (nonatomic, strong) UIImageView *myBackGroundImageView;
 
+@property (nonatomic, strong) UIView *myTodayBackGroundView;
+
 @property (nonatomic, assign) BOOL checked;
+
+@property (nonatomic, assign) BOOL isCurrentDay;
+
+//@property (nonatomic, assign) BOOL 
 
 - (id)initWithStyle:(WQCalendarTileStyle)style;
 

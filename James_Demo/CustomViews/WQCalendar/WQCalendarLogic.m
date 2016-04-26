@@ -21,7 +21,7 @@
 @property (nonatomic, strong) WQCalendarDay *currentCalendarDay;
 
 /* 用户点击选中的日历上的某一天 */
-@property (nonatomic, strong) NSDate *selectedDate;
+//@property (nonatomic, strong) NSDate *selectedDate;
 @property (nonatomic, strong) WQCalendarDay *selectedCalendarDay;
 
 @property (nonatomic, assign) NSUInteger selectedIndex;
@@ -105,7 +105,14 @@
 - (void)reloadCalendarDataWithDate:(NSDate *)date
 {
     self.selectedDate = date;
+    /*
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    formatter.dateFormat = @"YYYYMMdd";
     
+    NSDate *myDate = [formatter dateFromString:@"20160422"];
+    
+    self.selectedDate = myDate;
+    */
     NSDateComponents *c = [date YMDComponents];
     self.selectedCalendarDay = [WQCalendarDay calendarDayWithYear:c.year month:c.month day:c.day];
     
@@ -200,22 +207,60 @@
     
     //tileView.label.hidden = NO;
     
-    if (calendarDay.month != self.selectedCalendarDay.month) {
-        //tileView.label.backgroundColor = [UIColor colorWithRed:241/255.0f green:241/255.0f blue:241/255.0f alpha:0.8f];
-        tileView.label.textColor = [UIColor lightGrayColor];
-        
-        //tileView.label.hidden = YES;
-    }
-    
     if ([calendarDay isEqualTo:self.selectedCalendarDay]) {
         tileView.selected = YES;
     } else {
         tileView.selected = NO;
     }
     
+    if (calendarDay.month != self.selectedCalendarDay.month) {
+        //tileView.label.backgroundColor = [UIColor colorWithRed:241/255.0f green:241/255.0f blue:241/255.0f alpha:0.8f];
+        tileView.label.textColor = [UIColor lightGrayColor];
+        
+        //tileView.label.hidden = YES;
+    }
+    /*
+    if ([calendarDay isEqualTo:self.selectedCalendarDay]) {
+        tileView.selected = YES;
+    } else {
+        tileView.selected = NO;
+    }
+    */
     if ([calendarDay isEqualTo:self.currentCalendarDay]) {
         //tileView.label.textColor = [UIColor colorWithRed:249.0/255 green:75.0/255 blue:0 alpha:1];
         tileView.label.textColor = [UIColor whiteColor];
+        
+        if (![self.currentCalendarDay isEqualTo:self.selectedCalendarDay]) {
+            
+            tileView.label.textColor = [UIColor colorWithHexString:@"0x1d1d2f"];
+            
+            tileView.myTodayBackGroundView.hidden = NO;
+        }
+        else
+        {
+            tileView.myTodayBackGroundView.hidden = YES;
+        }
+        
+        /*
+        if (self.currentCalendarDay.day == self.selectedCalendarDay.day) {
+            
+            tileView.myTodayBackGroundView.hidden = YES;
+        }
+        else
+        {
+            tileView.myTodayBackGroundView.hidden = NO;
+        }
+        */
+        
+        //tileView.myTodayBackGroundView.hidden = NO;
+        
+        tileView.isCurrentDay = YES;
+    }
+    else
+    {
+        tileView.myTodayBackGroundView.hidden = YES;
+        
+        tileView.isCurrentDay = NO;
     }
 }
 
@@ -230,6 +275,8 @@
     self.selectedIndex = row * 7 + column;
     self.selectedCalendarDay = calendarDay;
     self.selectedDate = [self.selectedCalendarDay date];
+    
+    //[gridView reloadData];
     
     if (!sameMonth) {
         [self reloadGridView:gridView withDate:self.selectedDate];

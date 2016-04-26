@@ -38,14 +38,20 @@
     CGRect calendarRect = self.view.bounds;
     calendarRect.origin.y += 152, calendarRect.size.height -= 52;
     self.calendarView = [[WQDraggableCalendarView alloc] initWithFrame:calendarRect];
-    self.calendarView.draggble = NO;
+    //self.calendarView.draggble = NO;
     
     [self.view addSubview:self.calendarView];
     
     self.calendarView.backgroundColor = [UIColor lightGrayColor];
     
-    [self.calendarLogic reloadCalendarView:self.calendarView];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    formatter.dateFormat = @"YYYYMMdd";
     
+    NSDate *myDate = [formatter dateFromString:@"20160422"];
+    
+    [self.calendarLogic reloadCalendarView:self.calendarView withDate:myDate];
+    
+    //self.calendarLogic.selectedDate = [NSDate dateWithTimeIntervalSinceNow:-60*60*24*3];
     /*
     CGRect scrollRect = self.view.bounds;
     scrollRect.origin.y = 400;

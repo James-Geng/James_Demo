@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "WQCalendarGridView.h"
 
-#define WQ_CALENDAR_ROW_HEIGHT      40.0f
-//#define WQ_CALENDAR_ROW_HEIGHT self.bounds.size.width/7
+//#define WQ_CALENDAR_ROW_HEIGHT      40.0f
+#define WQ_CALENDAR_ROW_HEIGHT self.bounds.size.width/7
 
 @interface WQCalendarView : UIView
 

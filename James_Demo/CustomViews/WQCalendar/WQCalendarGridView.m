@@ -82,6 +82,8 @@
             tileView.label.frame = tileView.bounds;
             tileView.myBackGroundImageView.frame = CGRectMake(10, 10, tileView.bounds.size.width-20, tileView.bounds.size.height-20);
             tileView.myBackGroundImageView.layer.cornerRadius = (self.columnWidth-20)/2;
+            tileView.myTodayBackGroundView.frame = CGRectMake(10, 10, tileView.bounds.size.width-20, tileView.bounds.size.height-20);
+            tileView.myTodayBackGroundView.layer.cornerRadius = (self.columnWidth-20)/2;
             
             [self addSubview:tileView];
             [self.tiles addObject:tileView];
@@ -139,6 +141,15 @@
     
     self.selectedRow = row;
     self.selectedColumn = column;
+    
+    if (selectedTileView.isCurrentDay) {
+        
+        selectedTileView.myTodayBackGroundView.hidden = YES;
+    }
+    else
+    {
+        //selectedTileView.myTodayBackGroundView.hidden = NO;
+    }
     
     if (self.delegate && [self.delegate respondsToSelector:@selector(gridView:didSelectAtRow:column:)]) {
         [self.delegate gridView:self didSelectAtRow:row column:column];

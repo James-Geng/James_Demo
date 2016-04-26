@@ -19,6 +19,9 @@
 @property (nonatomic, weak) id<WQCalendarLogicDelegate> delegate;
 @property (nonatomic, readonly) WQCalendarDay *selectedCalendarDay;
 
+/* 用户点击选中的日历上的某一天 */
+@property (nonatomic, strong) NSDate *selectedDate;
+
 - (void)reloadCalendarView:(WQCalendarView *)calendarView;
 - (void)reloadCalendarView:(WQCalendarView *)calendarView withDate:(NSDate *)date;
 

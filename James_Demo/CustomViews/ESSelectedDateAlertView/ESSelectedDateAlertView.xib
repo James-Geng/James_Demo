@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ESSelectedDateAlertView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cop-pb-hMh" userLabel="alphaView">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vVA-xx-sJ4">
+                            <rect key="frame" x="7" y="152" width="50" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="PWc-GO-aLn"/>
+                                <constraint firstAttribute="height" constant="50" id="pOA-20-d5D"/>
+                            </constraints>
+                            <state key="normal" title="关闭"/>
+                            <connections>
+                                <action selector="myCloseButtonDidPress:" destination="iN0-l3-epB" eventType="touchUpInside" id="fku-6A-ya3"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gay-5F-Jzn">
+                            <rect key="frame" x="32" y="177" width="310" height="314"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xsp-CZ-eMW">
+                                    <rect key="frame" x="50" y="27" width="210" height="24"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2017年12月13日" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xXJ-VR-s8h">
+                                            <rect key="frame" x="54" y="4" width="103" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" red="0.11372549019607843" green="0.11372549019607843" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LJk-J4-Vrx">
+                                            <rect key="frame" x="27" y="0.0" width="24" height="24"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="24" id="YR4-Oe-81i"/>
+                                                <constraint firstAttribute="width" constant="24" id="zzD-FF-IxU"/>
+                                            </constraints>
+                                            <state key="normal" title="&lt;"/>
+                                            <connections>
+                                                <action selector="myLeftArrowPreviousButtonDidPress:" destination="iN0-l3-epB" eventType="touchUpInside" id="xe9-Yw-Soj"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WgD-NQ-aYb">
+                                            <rect key="frame" x="160" y="0.0" width="24" height="24"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="24" id="8QA-5I-6RD"/>
+                                                <constraint firstAttribute="width" constant="24" id="ktm-3i-0sK"/>
+                                            </constraints>
+                                            <state key="normal" title="&gt;"/>
+                                            <connections>
+                                                <action selector="myRightArrowNextButtonDidPress:" destination="iN0-l3-epB" eventType="touchUpInside" id="Fa5-Dh-0yh"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstItem="LJk-J4-Vrx" firstAttribute="centerY" secondItem="Xsp-CZ-eMW" secondAttribute="centerY" id="Jqx-Pi-vMZ"/>
+                                        <constraint firstItem="xXJ-VR-s8h" firstAttribute="centerX" secondItem="Xsp-CZ-eMW" secondAttribute="centerX" id="Mnc-wr-dLO"/>
+                                        <constraint firstAttribute="height" constant="24" id="NWc-Sz-gF5"/>
+                                        <constraint firstItem="xXJ-VR-s8h" firstAttribute="centerY" secondItem="Xsp-CZ-eMW" secondAttribute="centerY" id="Sdf-un-eMm"/>
+                                        <constraint firstItem="WgD-NQ-aYb" firstAttribute="leading" secondItem="xXJ-VR-s8h" secondAttribute="trailing" constant="3" id="ViH-br-vFB"/>
+                                        <constraint firstItem="WgD-NQ-aYb" firstAttribute="centerY" secondItem="Xsp-CZ-eMW" secondAttribute="centerY" id="d4o-Yb-tTV"/>
+                                        <constraint firstItem="xXJ-VR-s8h" firstAttribute="leading" secondItem="LJk-J4-Vrx" secondAttribute="trailing" constant="3" id="ucT-3e-kkD"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="Xsp-CZ-eMW" firstAttribute="leading" secondItem="gay-5F-Jzn" secondAttribute="leading" constant="50" id="2Nk-7O-FlR"/>
+                                <constraint firstAttribute="width" constant="310" id="Ttd-Rg-LGe"/>
+                                <constraint firstAttribute="trailing" secondItem="Xsp-CZ-eMW" secondAttribute="trailing" constant="50" id="c3h-Wz-xDi"/>
+                                <constraint firstAttribute="height" constant="314" id="vnJ-P5-gop"/>
+                                <constraint firstItem="Xsp-CZ-eMW" firstAttribute="top" secondItem="gay-5F-Jzn" secondAttribute="top" constant="27" id="vqm-ua-rQW"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="vVA-xx-sJ4" firstAttribute="leading" secondItem="gay-5F-Jzn" secondAttribute="leading" constant="-25" id="0WR-UO-cOF"/>
+                        <constraint firstItem="vVA-xx-sJ4" firstAttribute="top" secondItem="gay-5F-Jzn" secondAttribute="top" constant="-25" id="7sN-DO-bOE"/>
+                        <constraint firstItem="gay-5F-Jzn" firstAttribute="centerX" secondItem="Cop-pb-hMh" secondAttribute="centerX" id="QEI-yX-hMj"/>
+                        <constraint firstItem="gay-5F-Jzn" firstAttribute="centerY" secondItem="Cop-pb-hMh" secondAttribute="centerY" id="pkQ-Nh-b7u"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Cop-pb-hMh" secondAttribute="bottom" id="45i-8f-HXG"/>
+                <constraint firstAttribute="trailing" secondItem="Cop-pb-hMh" secondAttribute="trailing" id="5n0-9P-vU0"/>
+                <constraint firstItem="Cop-pb-hMh" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="GiU-yf-NFr"/>
+                <constraint firstItem="Cop-pb-hMh" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Iip-rb-vqY"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <connections>
+                <outlet property="alphaView" destination="Cop-pb-hMh" id="qIT-t7-k72"/>
+                <outlet property="myCloseButton" destination="vVA-xx-sJ4" id="XET-Bx-280"/>
+                <outlet property="myDateLabelContentView" destination="Xsp-CZ-eMW" id="oPC-2M-ZRw"/>
+                <outlet property="myDateTitleLabel" destination="xXJ-VR-s8h" id="j8P-6c-BQt"/>
+                <outlet property="myLeftArrowButton" destination="LJk-J4-Vrx" id="jJa-cD-wFZ"/>
+                <outlet property="myPickerContentView" destination="gay-5F-Jzn" id="oFF-7G-R12"/>
+                <outlet property="myRightArrowButton" destination="WgD-NQ-aYb" id="kf4-6c-Zwz"/>
+            </connections>
+        </view>
+    </objects>
+</document>
