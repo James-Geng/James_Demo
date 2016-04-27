@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "WQCalendarLogic.h"
 #import "WQDraggableCalendarView.h"
+#import "ESSelectedDateAlertView.h"
 
 @interface ViewController ()
 
@@ -30,7 +31,10 @@
 
 - (IBAction)buttonDidPress:(id)sender {
     
+    ESSelectedDateAlertView *selectedDateAlertView = [[ESSelectedDateAlertView alloc] init];
+    selectedDateAlertView.delegate = self;
     
+    [selectedDateAlertView showInView:[UIApplication sharedApplication].keyWindow withFrame:[UIScreen mainScreen].bounds];
 }
 
 - (void)showCalendar
@@ -42,7 +46,7 @@
     
     [self.view addSubview:self.calendarView];
     
-    self.calendarView.backgroundColor = [UIColor lightGrayColor];
+    self.calendarView.backgroundColor = [UIColor clearColor];
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     formatter.dateFormat = @"YYYYMMdd";

@@ -7,6 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WQCalendarLogic.h"
+#import "WQDraggableCalendarView.h"
+
+@protocol ESSelectedDateAlertViewDelegate;
 
 @interface ESSelectedDateAlertView : UIView
 
@@ -17,5 +21,21 @@
 @property (weak, nonatomic) IBOutlet UILabel *myDateTitleLabel;
 @property (weak, nonatomic) IBOutlet UIButton *myLeftArrowButton;
 @property (weak, nonatomic) IBOutlet UIButton *myRightArrowButton;
+@property (weak, nonatomic) IBOutlet UIView *myCustomDatePickerView;
+
+@property (nonatomic, strong) WQDraggableCalendarView *calendarView;
+@property (nonatomic, strong) WQCalendarLogic *calendarLogic;
+
+@property (weak) id delegate;
+
+-(void)closeViewWithAnimate:(BOOL) animate;
+
+-(void)showInView:(UIView *)view withFrame:(CGRect)frame;
+
+@end
+
+@protocol ESSelectedDateAlertViewDelegate
+
+//-(void)
 
 @end

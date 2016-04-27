@@ -80,16 +80,20 @@
             WQCalendarTileView *tileView = [self.dataSource gridView:self tileViewForRow:i column:j];
             tileView.frame = (CGRect){x, y, self.columnWidth, self.rowHeight};
             tileView.label.frame = tileView.bounds;
-            tileView.myBackGroundImageView.frame = CGRectMake(10, 10, tileView.bounds.size.width-20, tileView.bounds.size.height-20);
-            tileView.myBackGroundImageView.layer.cornerRadius = (self.columnWidth-20)/2;
-            tileView.myTodayBackGroundView.frame = CGRectMake(10, 10, tileView.bounds.size.width-20, tileView.bounds.size.height-20);
-            tileView.myTodayBackGroundView.layer.cornerRadius = (self.columnWidth-20)/2;
+            //tileView.myBackGroundImageView.frame = CGRectMake(10, 10, tileView.bounds.size.width-20, tileView.bounds.size.height-20);
+            //tileView.myBackGroundImageView.layer.cornerRadius = (self.columnWidth-20)/2;
+            //tileView.myTodayBackGroundView.frame = CGRectMake(10, 10, tileView.bounds.size.width-20, tileView.bounds.size.height-20);
+            //tileView.myTodayBackGroundView.layer.cornerRadius = (self.columnWidth-20)/2;
+            tileView.myBackGroundImageView.frame = CGRectMake(5, 5, tileView.bounds.size.width-10, tileView.bounds.size.height-10);
+            tileView.myBackGroundImageView.layer.cornerRadius = (self.columnWidth-10)/2;
+            tileView.myTodayBackGroundView.frame = CGRectMake(5, 5, tileView.bounds.size.width-10, tileView.bounds.size.height-10);
+            tileView.myTodayBackGroundView.layer.cornerRadius = (self.columnWidth-10)/2;
             
             [self addSubview:tileView];
             [self.tiles addObject:tileView];
             
             if (i == 1) {
-                tileView.checked = YES;
+                //tileView.checked = YES;
             }
             
             if (tileView.selected) {

@@ -182,8 +182,8 @@
 
 - (CGFloat)heightForRowInGridView:(WQCalendarGridView *)gridView
 {
-    return gridView.bounds.size.width/7;
-    //return WQ_CALENDAR_ROW_HEIGHT;
+       return gridView.bounds.size.width/7;
+//    return 40;
 }
 
 - (WQCalendarTileView *)gridView:(WQCalendarGridView *)gridView tileViewForRow:(NSUInteger)row column:(NSUInteger)column

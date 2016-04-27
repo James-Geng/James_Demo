@@ -53,11 +53,11 @@
 
 - (void)layoutWithDefaultStyle
 {
-    self.backgroundColor = [UIColor whiteColor];
+    self.backgroundColor = [UIColor clearColor];
     
     self.myBackGroundImageView = [[UIImageView alloc] init];
     
-    self.myBackGroundImageView.backgroundColor = [UIColor orangeColor];
+    self.myBackGroundImageView.backgroundColor = [UIColor colorWithHexString:@"0xf36c60"];
     
 //    self.myBackGroundImageView.image = [UIImage imageNamed:@"weeklyTitle"];
 //    
@@ -74,7 +74,7 @@
     [self addSubview:_myTodayBackGroundView];
     
     self.label = [[UILabel alloc] init];
-    self.label.font = [UIFont systemFontOfSize:12];
+    self.label.font = [UIFont systemFontOfSize:11];
     self.label.textColor = [UIColor colorWithHexString:@"0x1d1d26"];
     [self addSubview:self.label];
     

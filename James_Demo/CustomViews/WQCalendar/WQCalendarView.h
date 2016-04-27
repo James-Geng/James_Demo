@@ -14,7 +14,8 @@
 
 @interface WQCalendarView : UIView
 
-@property (nonatomic, strong) UIImageView *weeklyHeader;
+//@property (nonatomic, strong) UIImageView *weeklyHeader;
+@property (nonatomic, strong) UIView *weeklyHeader;
 @property (nonatomic, strong) WQCalendarGridView *gridView;
 
 @end
