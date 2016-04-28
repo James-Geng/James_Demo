@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		913EFF431CD1EFFB00F04294 /* ESSignCalendarStatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 913EFF411CD1EFFB00F04294 /* ESSignCalendarStatisticsViewController.m */; };
+		913EFF441CD1EFFB00F04294 /* ESSignCalendarStatisticsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 913EFF421CD1EFFB00F04294 /* ESSignCalendarStatisticsViewController.xib */; };
 		916369E31CCF19CC0057CCE8 /* weeklyTitle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 916369E21CCF19CC0057CCE8 /* weeklyTitle@2x.png */; };
 		91636A031CCF3EE90057CCE8 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 916369E61CCF3EE90057CCE8 /* NSData+Base64.m */; };
 		91636A041CCF3EE90057CCE8 /* NSDate+Hour_Minute.m in Sources */ = {isa = PBXBuildFile; fileRef = 916369E81CCF3EE90057CCE8 /* NSDate+Hour_Minute.m */; };
@@ -53,6 +55,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		913EFF401CD1EFFB00F04294 /* ESSignCalendarStatisticsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESSignCalendarStatisticsViewController.h; sourceTree = "<group>"; };
+		913EFF411CD1EFFB00F04294 /* ESSignCalendarStatisticsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESSignCalendarStatisticsViewController.m; sourceTree = "<group>"; };
+		913EFF421CD1EFFB00F04294 /* ESSignCalendarStatisticsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ESSignCalendarStatisticsViewController.xib; sourceTree = "<group>"; };
 		916369E21CCF19CC0057CCE8 /* weeklyTitle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weeklyTitle@2x.png"; sourceTree = "<group>"; };
 		916369E51CCF3EE90057CCE8 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
 		916369E61CCF3EE90057CCE8 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
@@ -137,6 +142,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		913EFF3F1CD1EFA400F04294 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				913EFF401CD1EFFB00F04294 /* ESSignCalendarStatisticsViewController.h */,
+				913EFF411CD1EFFB00F04294 /* ESSignCalendarStatisticsViewController.m */,
+				913EFF421CD1EFFB00F04294 /* ESSignCalendarStatisticsViewController.xib */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		916369E41CCF3EE90057CCE8 /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -244,6 +259,7 @@
 				919388CB1CCA0E5900CEE59C /* ViewController.h */,
 				919388CC1CCA0E5900CEE59C /* ViewController.m */,
 				919388CE1CCA0E5900CEE59C /* Main.storyboard */,
+				913EFF3F1CD1EFA400F04294 /* ViewControllers */,
 				919388D11CCA0E5900CEE59C /* Assets.xcassets */,
 				919388D31CCA0E5900CEE59C /* LaunchScreen.storyboard */,
 				919388D61CCA0E5900CEE59C /* Info.plist */,
@@ -359,6 +375,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				913EFF441CD1EFFB00F04294 /* ESSignCalendarStatisticsViewController.xib in Resources */,
 				91636A441CCF6BEC0057CCE8 /* ESSelectedDateAlertView.xib in Resources */,
 				919388D51CCA0E5900CEE59C /* LaunchScreen.storyboard in Resources */,
 				919388D21CCA0E5900CEE59C /* Assets.xcassets in Resources */,
@@ -393,6 +410,7 @@
 				91636A211CCF3FD60057CCE8 /* NSString+Hashes.m in Sources */,
 				91636A241CCF3FD60057CCE8 /* UIColor+ColorWithHex.m in Sources */,
 				919388CA1CCA0E5900CEE59C /* AppDelegate.m in Sources */,
+				913EFF431CD1EFFB00F04294 /* ESSignCalendarStatisticsViewController.m in Sources */,
 				91636A221CCF3FD60057CCE8 /* NSString+MD5Addition.m in Sources */,
 				91636A3B1CCF6B0C0057CCE8 /* WQCalendarLogic.m in Sources */,
 				91636A051CCF3EE90057CCE8 /* NSString+common.m in Sources */,

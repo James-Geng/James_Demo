@@ -34,12 +34,24 @@
     
     //self.calendarView.backgroundColor = [UIColor lightGrayColor];
     
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    formatter.dateFormat = @"YYYYMMdd";
+    //NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    //formatter.dateFormat = @"YYYYMMdd";
     
-    NSDate *myDate = [formatter dateFromString:@"20160422"];
+    //NSDate *myDate = [formatter dateFromString:@"20160422"];
     
-    [self.calendarLogic reloadCalendarView:self.calendarView withDate:myDate];
+    NSDate *today = [[NSDate alloc] init];
+    
+    [self.calendarLogic reloadCalendarView:self.calendarView withDate:today];
+    
+    NSDateComponents *dateComponents = [today YMDComponents];
+    
+    NSLog(@"dateComponents = %@",dateComponents);
+    
+    _myCurrentMonth = dateComponents.month;
+    
+    _myCurrentYear = dateComponents.year;
+    
+    self.myLeftArrowButton.userInteractionEnabled = NO;
 }
 
 /*
@@ -75,6 +87,10 @@
 }
 
 -(void)closeViewWithAnimate:(BOOL) animate{
+    
+    if (_delegate && [_delegate respondsToSelector:@selector(ESSelectedDateAlertView:closeViewWithSelectedDate:)]) {
+        [_delegate ESSelectedDateAlertView:self closeViewWithSelectedDate:_calendarLogic.selectedDate];
+    }
     
     CGFloat duration = 0.3f;
     if (animate) {
@@ -127,12 +143,44 @@
     
     [self.calendarLogic goToPreviousMonthInCalendarView:self.calendarView];
     self.myDateTitleLabel.text = [NSString stringWithFormat:@"%lu年%lu月%lu日", (unsigned long)self.calendarLogic.selectedCalendarDay.year, (unsigned long)self.calendarLogic.selectedCalendarDay.month, (unsigned long)self.calendarLogic.selectedCalendarDay.day];
+    
+    NSLog(@"day = %@",self.calendarLogic.selectedCalendarDay);
+    
+    [self commonHiddenLeftArrowButton];
 }
 
 - (IBAction)myRightArrowNextButtonDidPress:(id)sender {
     
     [self.calendarLogic goToNextMonthInCalendarView:self.calendarView];
     self.myDateTitleLabel.text = [NSString stringWithFormat:@"%lu年%lu月%lu日", (unsigned long)self.calendarLogic.selectedCalendarDay.year, (unsigned long)self.calendarLogic.selectedCalendarDay.month, (unsigned long)self.calendarLogic.selectedCalendarDay.day];
+    
+    [self commonHiddenLeftArrowButton];
+}
+
+-(void)commonHiddenLeftArrowButton
+{
+    if ([self isMoreThanCurrentMonthWithSelectedCalendarDay:self.calendarLogic.selectedCalendarDay]) {
+        
+        self.myLeftArrowButton.userInteractionEnabled = YES;
+    }
+    else
+    {
+        self.myLeftArrowButton.userInteractionEnabled = NO;
+    }
+}
+
+-(BOOL)isMoreThanCurrentMonthWithSelectedCalendarDay:(WQCalendarDay *) selectedCalendarDay
+{
+    NSInteger month = selectedCalendarDay.month;
+    
+    NSInteger year = selectedCalendarDay.year;
+    
+    if (month > _myCurrentMonth || year > _myCurrentYear) {
+        
+        return YES;
+    }
+    
+    return NO;
 }
 
 @end

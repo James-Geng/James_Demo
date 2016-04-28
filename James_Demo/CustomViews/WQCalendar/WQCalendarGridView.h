@@ -29,9 +29,17 @@
 
 - (void)gridView:(WQCalendarGridView *)gridView didSelectAtRow:(NSUInteger)row column:(NSUInteger)column;
 
+- (void)gridView:(WQCalendarGridView *)gridView autoResizeHeight:(CGFloat ) height;
+
 @end
 
 /* ***** */
+
+typedef NS_ENUM(NSInteger, WQCalendarGridType)
+{
+    WQCalendarGridNormal,
+    WQCalendarGridStatistics
+};
 
 @interface WQCalendarGridView : UIView
 
@@ -44,6 +52,8 @@
 
 @property (nonatomic, readonly) NSInteger selectedRow;
 @property (nonatomic, readonly) NSInteger selectedColumn;
+
+@property (assign) WQCalendarGridType calendarGridType;
 
 - (void)reloadData;
 

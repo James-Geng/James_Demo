@@ -38,4 +38,6 @@
 
 - (void)calendarMonthDidChange;
 
+-(void)WQCalendarLogic:(WQCalendarLogic *) WQCalendarLogic WQCalendarGridView:(WQCalendarGridView *) WQCalendarGridView autoResizeHeight:(CGFloat ) height;
+
 @end

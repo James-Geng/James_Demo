@@ -10,11 +10,14 @@
 #import "WQCalendarLogic.h"
 #import "WQDraggableCalendarView.h"
 #import "ESSelectedDateAlertView.h"
+#import "ESSignCalendarStatisticsViewController.h"
 
-@interface ViewController ()
+@interface ViewController ()<ESSelectedDateAlertViewDelegate>
 
 @property (nonatomic, strong) WQDraggableCalendarView *calendarView;
 @property (nonatomic, strong) WQCalendarLogic *calendarLogic;
+
+@property (weak, nonatomic) IBOutlet UILabel *myDateLabel;
 
 @end
 
@@ -23,6 +26,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    [self.navigationController.navigationBar setTranslucent:NO];
     
     self.calendarLogic = [[WQCalendarLogic alloc] init];
     
@@ -35,6 +40,13 @@
     selectedDateAlertView.delegate = self;
     
     [selectedDateAlertView showInView:[UIApplication sharedApplication].keyWindow withFrame:[UIScreen mainScreen].bounds];
+}
+
+- (IBAction)calendarStatisticsPushDidPress:(id)sender {
+    
+    ESSignCalendarStatisticsViewController *signCSViewController = [[ESSignCalendarStatisticsViewController alloc] initWithNibName:@"ESSignCalendarStatisticsViewController" bundle:nil];
+    
+    [self.navigationController pushViewController:signCSViewController animated:YES];
 }
 
 - (void)showCalendar
@@ -66,6 +78,18 @@
     [self.view addSubview:self.scrollCalendarView];
     [self.scrollCalendarView reloadData];
     */
+}
+
+#pragma mark ESSelectedDateAlertViewDelegate
+
+-(void)ESSelectedDateAlertView:(ESSelectedDateAlertView *)ESSelectedDateAlertView closeViewWithSelectedDate:(NSDate *)selectedDate
+{
+    NSLog(@"selected date = %@",selectedDate);
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    formatter.dateFormat = @"YYYY年MM月dd日";
+    
+    self.myDateLabel.text = [formatter stringFromDate:selectedDate];
 }
 
 - (void)didReceiveMemoryWarning {

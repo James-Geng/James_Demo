@@ -92,8 +92,8 @@
             [self addSubview:tileView];
             [self.tiles addObject:tileView];
             
-            if (i == 1) {
-                //tileView.checked = YES;
+            if (i == 1 && self.calendarGridType) {
+                tileView.checked = YES;
             }
             
             if (tileView.selected) {
@@ -108,9 +108,13 @@
         CGRect frame = self.frame;
         frame.size.height = self.rowHeight * self.rows;
         self.frame = frame;
+        
+        if (_delegate && [_delegate respondsToSelector:@selector(gridView:autoResizeHeight:)]) {
+            [_delegate gridView:self autoResizeHeight:frame.size.height];
+        }
     }
     
-    if (self.tapGesture == nil) {
+    if (self.tapGesture == nil && !self.calendarGridType) {
         self.tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tileViewDidTap:)];
         [self addGestureRecognizer:self.tapGesture];
     }

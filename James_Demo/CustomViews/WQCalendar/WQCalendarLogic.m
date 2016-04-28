@@ -282,6 +282,18 @@
         [self reloadGridView:gridView withDate:self.selectedDate];
     }
 }
+
+-(void)gridView:(WQCalendarGridView *)gridView autoResizeHeight:(CGFloat)height
+{
+    if (height > 0) {
+        
+        if (_delegate && [_delegate respondsToSelector:@selector(WQCalendarLogic:WQCalendarGridView:autoResizeHeight:)]) {
+            
+            [_delegate WQCalendarLogic:self WQCalendarGridView:gridView autoResizeHeight:height];
+        }
+    }
+}
+
 /*
 #pragma mark - WQScrollCalendarViewDataSource
 

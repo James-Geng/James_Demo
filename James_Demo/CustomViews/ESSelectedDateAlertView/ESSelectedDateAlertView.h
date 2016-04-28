@@ -13,6 +13,10 @@
 @protocol ESSelectedDateAlertViewDelegate;
 
 @interface ESSelectedDateAlertView : UIView
+{
+    NSInteger _myCurrentMonth;
+    NSInteger _myCurrentYear;
+}
 
 @property (weak, nonatomic) IBOutlet UIView *alphaView;
 @property (weak, nonatomic) IBOutlet UIView *myPickerContentView;
@@ -36,6 +40,6 @@
 
 @protocol ESSelectedDateAlertViewDelegate
 
-//-(void)
+-(void)ESSelectedDateAlertView:(ESSelectedDateAlertView *) ESSelectedDateAlertView closeViewWithSelectedDate:(NSDate *) selectedDate;
 
 @end

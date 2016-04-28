@@ -28,6 +28,7 @@
         
         self.weeklyHeader = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, 31)];
         _weeklyHeader.backgroundColor = [UIColor clearColor];
+        _weeklyHeader.tag = 1;
         
         NSMutableArray *titleArray = [NSMutableArray arrayWithObjects:@"日",@"一",@"二",@"三",@"四",@"五",@"六", nil];
         
@@ -52,6 +53,7 @@
         //CGFloat headerHeight = 0;
         CGRect gridRect = (CGRect){0, headerHeight, self.bounds.size.width, /*WQ_CALENDAR_ROW_HEIGHT * 6*/self.bounds.size.height-_weeklyHeader.height};
         self.gridView = [[WQCalendarGridView alloc] initWithFrame:gridRect];
+        //self.gridView.calendarGridType = (NSInteger )self.calendarViewType;
         [self addSubview:self.gridView];
     }
     return self;
