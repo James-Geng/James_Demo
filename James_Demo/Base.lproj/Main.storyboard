@@ -37,12 +37,24 @@
                                     <action selector="calendarStatisticsPushDidPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CS7-SZ-9VT"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cZv-6t-GKi">
+                                <rect key="frame" x="0.0" y="181" width="375" height="486"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="vCK-Ph-kEG"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="DIH-iX-8XW"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="tDZ-H9-siz" firstAttribute="top" secondItem="As5-5m-f5H" secondAttribute="bottom" constant="8" id="0Wj-4O-Fva"/>
+                            <constraint firstItem="cZv-6t-GKi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="32E-pA-GU1"/>
                             <constraint firstItem="Njn-dE-xgm" firstAttribute="leading" secondItem="tDZ-H9-siz" secondAttribute="trailing" constant="33" id="8gn-q2-jVo"/>
                             <constraint firstItem="tDZ-H9-siz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ald-jM-kkz"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cZv-6t-GKi" secondAttribute="bottom" id="Djw-jn-g7i"/>
+                            <constraint firstItem="cZv-6t-GKi" firstAttribute="top" secondItem="tDZ-H9-siz" secondAttribute="bottom" constant="14" id="QiH-xW-bt8"/>
+                            <constraint firstAttribute="trailing" secondItem="cZv-6t-GKi" secondAttribute="trailing" id="S9S-lY-mdy"/>
                             <constraint firstItem="Njn-dE-xgm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="73" id="Uf1-NF-jGi"/>
                             <constraint firstItem="As5-5m-f5H" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Z6N-Fn-LnA"/>
                             <constraint firstItem="tDZ-H9-siz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="d7l-x2-7qY"/>
@@ -61,6 +73,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="myDateLabel" destination="As5-5m-f5H" id="QhH-jc-D4d"/>
+                        <outlet property="myTableView" destination="cZv-6t-GKi" id="Ocj-vq-Zg6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

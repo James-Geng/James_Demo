@@ -12,7 +12,7 @@
 
 @protocol ESSelectedDateAlertViewDelegate;
 
-@interface ESSelectedDateAlertView : UIView
+@interface ESSelectedDateAlertView : UIView<WQCalendarLogicDelegate>
 {
     NSInteger _myCurrentMonth;
     NSInteger _myCurrentYear;
@@ -26,6 +26,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *myLeftArrowButton;
 @property (weak, nonatomic) IBOutlet UIButton *myRightArrowButton;
 @property (weak, nonatomic) IBOutlet UIView *myCustomDatePickerView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *myPickerContentViewHeightConstraint;
 
 @property (nonatomic, strong) WQDraggableCalendarView *calendarView;
 @property (nonatomic, strong) WQCalendarLogic *calendarLogic;

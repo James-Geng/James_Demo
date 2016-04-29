@@ -108,7 +108,7 @@
         CGRect frame = self.frame;
         frame.size.height = self.rowHeight * self.rows;
         self.frame = frame;
-        
+
         if (_delegate && [_delegate respondsToSelector:@selector(gridView:autoResizeHeight:)]) {
             [_delegate gridView:self autoResizeHeight:frame.size.height];
         }

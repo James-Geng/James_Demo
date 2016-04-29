@@ -35,6 +35,10 @@
 		91636A3E1CCF6B0C0057CCE8 /* WQDraggableCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 91636A371CCF6B0C0057CCE8 /* WQDraggableCalendarView.m */; };
 		91636A421CCF6BDA0057CCE8 /* ESSelectedDateAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 91636A411CCF6BDA0057CCE8 /* ESSelectedDateAlertView.m */; };
 		91636A441CCF6BEC0057CCE8 /* ESSelectedDateAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91636A431CCF6BEC0057CCE8 /* ESSelectedDateAlertView.xib */; };
+		9180B9E31CD33FCF008E138C /* ESSignViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9180B9E11CD33FCF008E138C /* ESSignViewController.m */; };
+		9180B9E41CD33FCF008E138C /* ESSignViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9180B9E21CD33FCF008E138C /* ESSignViewController.xib */; };
+		9180B9E91CD34485008E138C /* ESSignRecordSingleImageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9180B9E71CD34485008E138C /* ESSignRecordSingleImageTableViewCell.m */; };
+		9180B9EA1CD34485008E138C /* ESSignRecordSingleImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9180B9E81CD34485008E138C /* ESSignRecordSingleImageTableViewCell.xib */; };
 		919388C71CCA0E5900CEE59C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 919388C61CCA0E5900CEE59C /* main.m */; };
 		919388CA1CCA0E5900CEE59C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 919388C91CCA0E5900CEE59C /* AppDelegate.m */; };
 		919388CD1CCA0E5900CEE59C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 919388CC1CCA0E5900CEE59C /* ViewController.m */; };
@@ -109,6 +113,12 @@
 		91636A401CCF6BDA0057CCE8 /* ESSelectedDateAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESSelectedDateAlertView.h; sourceTree = "<group>"; };
 		91636A411CCF6BDA0057CCE8 /* ESSelectedDateAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESSelectedDateAlertView.m; sourceTree = "<group>"; };
 		91636A431CCF6BEC0057CCE8 /* ESSelectedDateAlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ESSelectedDateAlertView.xib; sourceTree = "<group>"; };
+		9180B9E01CD33FCF008E138C /* ESSignViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESSignViewController.h; sourceTree = "<group>"; };
+		9180B9E11CD33FCF008E138C /* ESSignViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESSignViewController.m; sourceTree = "<group>"; };
+		9180B9E21CD33FCF008E138C /* ESSignViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ESSignViewController.xib; sourceTree = "<group>"; };
+		9180B9E61CD34485008E138C /* ESSignRecordSingleImageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESSignRecordSingleImageTableViewCell.h; sourceTree = "<group>"; };
+		9180B9E71CD34485008E138C /* ESSignRecordSingleImageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESSignRecordSingleImageTableViewCell.m; sourceTree = "<group>"; };
+		9180B9E81CD34485008E138C /* ESSignRecordSingleImageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ESSignRecordSingleImageTableViewCell.xib; sourceTree = "<group>"; };
 		919388C21CCA0E5900CEE59C /* James_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = James_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		919388C61CCA0E5900CEE59C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		919388C81CCA0E5900CEE59C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -145,6 +155,7 @@
 		913EFF3F1CD1EFA400F04294 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				9180B9DF1CD33FB2008E138C /* Sign */,
 				913EFF401CD1EFFB00F04294 /* ESSignCalendarStatisticsViewController.h */,
 				913EFF411CD1EFFB00F04294 /* ESSignCalendarStatisticsViewController.m */,
 				913EFF421CD1EFFB00F04294 /* ESSignCalendarStatisticsViewController.xib */,
@@ -227,6 +238,27 @@
 				91636A431CCF6BEC0057CCE8 /* ESSelectedDateAlertView.xib */,
 			);
 			path = ESSelectedDateAlertView;
+			sourceTree = "<group>";
+		};
+		9180B9DF1CD33FB2008E138C /* Sign */ = {
+			isa = PBXGroup;
+			children = (
+				9180B9E51CD3420E008E138C /* ESSignCells */,
+				9180B9E01CD33FCF008E138C /* ESSignViewController.h */,
+				9180B9E11CD33FCF008E138C /* ESSignViewController.m */,
+				9180B9E21CD33FCF008E138C /* ESSignViewController.xib */,
+			);
+			path = Sign;
+			sourceTree = "<group>";
+		};
+		9180B9E51CD3420E008E138C /* ESSignCells */ = {
+			isa = PBXGroup;
+			children = (
+				9180B9E61CD34485008E138C /* ESSignRecordSingleImageTableViewCell.h */,
+				9180B9E71CD34485008E138C /* ESSignRecordSingleImageTableViewCell.m */,
+				9180B9E81CD34485008E138C /* ESSignRecordSingleImageTableViewCell.xib */,
+			);
+			path = ESSignCells;
 			sourceTree = "<group>";
 		};
 		919388B91CCA0E5900CEE59C = {
@@ -375,6 +407,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9180B9E41CD33FCF008E138C /* ESSignViewController.xib in Resources */,
+				9180B9EA1CD34485008E138C /* ESSignRecordSingleImageTableViewCell.xib in Resources */,
 				913EFF441CD1EFFB00F04294 /* ESSignCalendarStatisticsViewController.xib in Resources */,
 				91636A441CCF6BEC0057CCE8 /* ESSelectedDateAlertView.xib in Resources */,
 				919388D51CCA0E5900CEE59C /* LaunchScreen.storyboard in Resources */,
@@ -403,6 +437,7 @@
 				91636A3C1CCF6B0C0057CCE8 /* WQCalendarTileView.m in Sources */,
 				91636A3A1CCF6B0C0057CCE8 /* WQCalendarGridView.m in Sources */,
 				919388CD1CCA0E5900CEE59C /* ViewController.m in Sources */,
+				9180B9E91CD34485008E138C /* ESSignRecordSingleImageTableViewCell.m in Sources */,
 				91636A0B1CCF3EE90057CCE8 /* UIButton+CustomBG.m in Sources */,
 				91636A0A1CCF3EE90057CCE8 /* UIBarButtonItem+IW.m in Sources */,
 				91636A031CCF3EE90057CCE8 /* NSData+Base64.m in Sources */,
@@ -419,6 +454,7 @@
 				91636A3E1CCF6B0C0057CCE8 /* WQDraggableCalendarView.m in Sources */,
 				91636A0C1CCF3EE90057CCE8 /* UIDevice+Resolutions.m in Sources */,
 				91636A071CCF3EE90057CCE8 /* NSString+urlencode.m in Sources */,
+				9180B9E31CD33FCF008E138C /* ESSignViewController.m in Sources */,
 				91636A3D1CCF6B0C0057CCE8 /* WQCalendarView.m in Sources */,
 				91636A261CCF3FD60057CCE8 /* UIDevice-Hardware.m in Sources */,
 				91636A271CCF3FD60057CCE8 /* UIView+Additions.m in Sources */,

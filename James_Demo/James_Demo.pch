@@ -23,4 +23,8 @@
 #import "UIAlertView+Blocks.h"
 #import "UIDevice+Resolutions.h"
 
+#define KScreen [[UIScreen mainScreen] bounds] //整个屏幕的尺寸
+#define KScreenW [[UIScreen mainScreen] bounds].size.width //整个屏幕的宽
+#define KScreenH [[UIScreen mainScreen] bounds].size.height//整个屏幕的高
+
 #endif /* James_Demo_pch */

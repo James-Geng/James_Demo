@@ -120,6 +120,7 @@
                 <outlet property="myDateTitleLabel" destination="xXJ-VR-s8h" id="j8P-6c-BQt"/>
                 <outlet property="myLeftArrowButton" destination="LJk-J4-Vrx" id="jJa-cD-wFZ"/>
                 <outlet property="myPickerContentView" destination="gay-5F-Jzn" id="oFF-7G-R12"/>
+                <outlet property="myPickerContentViewHeightConstraint" destination="vnJ-P5-gop" id="mQW-5C-zVs"/>
                 <outlet property="myRightArrowButton" destination="WgD-NQ-aYb" id="kf4-6c-Zwz"/>
             </connections>
         </view>

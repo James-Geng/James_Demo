@@ -23,12 +23,15 @@
 
 -(void)commonInit
 {
-    self.calendarLogic = [[WQCalendarLogic alloc] init];;
+    self.calendarLogic = [[WQCalendarLogic alloc] init];
+    
+    self.calendarLogic.delegate = self;
     
     CGRect calendarRect = self.myCustomDatePickerView.bounds;
     //calendarRect.origin.y += 152, calendarRect.size.height -= 52;
     self.calendarView = [[WQDraggableCalendarView alloc] initWithFrame:calendarRect];
     //self.calendarView.draggble = NO;
+    self.calendarView.gridView.autoResize = YES;
     
     [self.myCustomDatePickerView addSubview:self.calendarView];
     
@@ -181,6 +184,13 @@
     }
     
     return NO;
+}
+
+#pragma mark WQCalendarLogicDelegate
+
+-(void)WQCalendarLogic:(WQCalendarLogic *)WQCalendarLogic WQCalendarGridView:(WQCalendarGridView *)WQCalendarGridView autoResizeHeight:(CGFloat)height
+{
+    self.myPickerContentViewHeightConstraint.constant = height + 59 + 4 + 31;
 }
 
 @end

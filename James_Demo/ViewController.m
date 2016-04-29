@@ -11,13 +11,17 @@
 #import "WQDraggableCalendarView.h"
 #import "ESSelectedDateAlertView.h"
 #import "ESSignCalendarStatisticsViewController.h"
+#import "ESSignViewController.h"
 
-@interface ViewController ()<ESSelectedDateAlertViewDelegate>
+@interface ViewController ()<ESSelectedDateAlertViewDelegate,UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) WQDraggableCalendarView *calendarView;
 @property (nonatomic, strong) WQCalendarLogic *calendarLogic;
 
 @property (weak, nonatomic) IBOutlet UILabel *myDateLabel;
+@property (weak, nonatomic) IBOutlet UITableView *myTableView;
+
+@property (strong, nonatomic) NSMutableArray *myTableViewDataArray;
 
 @end
 
@@ -29,9 +33,13 @@
     
     [self.navigationController.navigationBar setTranslucent:NO];
     
-    self.calendarLogic = [[WQCalendarLogic alloc] init];
+    //self.calendarLogic = [[WQCalendarLogic alloc] init];
     
-    [self showCalendar];
+    //[self showCalendar];
+    
+    self.myTableViewDataArray = [NSMutableArray arrayWithObjects:@"SignCellViewController", nil];
+    
+    self.myTableView.tableFooterView = [[UIView alloc] init];
 }
 
 - (IBAction)buttonDidPress:(id)sender {
@@ -90,6 +98,68 @@
     formatter.dateFormat = @"YYYY年MM月dd日";
     
     self.myDateLabel.text = [formatter stringFromDate:selectedDate];
+}
+
+#pragma mark UITableViewDelegate/Datasource
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    if (_myTableViewDataArray.count>0) {
+        
+        return _myTableViewDataArray.count;
+    }
+    return 12;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *reuseIdentifier = @"Cell";
+    
+    UITableViewCell *cell = (UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
+    
+    if (cell == nil) {
+        
+        cell = [[UITableViewCell alloc] initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:reuseIdentifier];
+    }
+    
+    
+    if (_myTableViewDataArray.count > indexPath.row) {
+        
+        NSString *title = _myTableViewDataArray[indexPath.row];
+        
+        cell.textLabel.text = title;
+    }
+    else
+    {
+        cell.textLabel.text = @"EXO";
+    }
+    
+    return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    switch (indexPath.row) {
+        case 0:
+            
+        {
+            ESSignViewController *signViewController = [[ESSignViewController alloc] initWithNibName:@"ESSignViewController" bundle:nil];
+            
+            [self.navigationController pushViewController:signViewController animated:YES];
+        }
+            
+            break;
+            
+        default:
+            break;
+    }
 }
 
 - (void)didReceiveMemoryWarning {
