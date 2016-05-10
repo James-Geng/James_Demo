@@ -12,6 +12,7 @@
 #import "ESSelectedDateAlertView.h"
 #import "ESSignCalendarStatisticsViewController.h"
 #import "ESSignViewController.h"
+#import "AFNetworking.h"
 
 @interface ViewController ()<ESSelectedDateAlertViewDelegate,UITableViewDelegate,UITableViewDataSource>
 
@@ -40,6 +41,82 @@
     self.myTableViewDataArray = [NSMutableArray arrayWithObjects:@"SignCellViewController", nil];
     
     self.myTableView.tableFooterView = [[UIView alloc] init];
+    
+    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+    
+    [dic setObject:@"1.0" forKey:@"version"];
+    
+    [dic setObject:@"ios" forKey:@"os"];
+    
+    [dic setObject:@"" forKey:@"uid"];
+    
+    [dic setObject:@"" forKey:@"token"];
+    
+    [dic setObject:@"13510802902" forKey:@"phone"];
+    
+    [dic setObject:@"Keai1234" forKey:@"password"];
+    
+    [dic setObject:@"user/loginbyphone" forKey:@"action"];
+    
+//    [dic setObject:@"test/test" forKey:@"action"];
+    
+    AFHTTPSessionManager *session = [AFHTTPSessionManager manager];
+    
+    //session.securityPolicy.allowInvalidCertificates = YES; // not recommended for production
+    //session.responseSerializer = [AFJSONResponseSerializer serializer];
+    //session.requestSerializer = [AFJSONRequestSerializer serializer];
+    
+    //允许非权威机构颁发的证书
+    session.securityPolicy.allowInvalidCertificates = YES;
+    //也不验证域名一致性
+    session.securityPolicy.validatesDomainName = NO;
+    //关闭缓存避免干扰测试
+    session.requestSerializer.cachePolicy = NSURLRequestReloadIgnoringLocalCacheData;
+    
+    ///*
+    [session POST:@"https://139.196.180.54/" parameters:dic progress:^(NSProgress * _Nonnull uploadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        NSLog(@"sucess = %@",responseObject);
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+        NSLog(@"error = %@",error);
+        
+    }];
+    //*/
+    /*
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    //允许非权威机构颁发的证书
+    manager.securityPolicy.allowInvalidCertificates = YES;
+    //也不验证域名一致性
+    manager.securityPolicy.validatesDomainName = NO;
+    //关闭缓存避免干扰测试
+    manager.requestSerializer.cachePolicy = NSURLRequestReloadIgnoringLocalCacheData;
+    [manager GET:@"https://tv.diveinedu.com/channel/" parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSLog(@"%@",responseObject);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"%@",error);
+    }];
+    */
+    /*
+    //NSString *url = @"https://maps.googleapis.com/maps/api/place/details/json?placeid=23232323&key=23232323";
+    
+    NSString *url = @"http://data.mobile.idol001.com/api_moblie_idol.php?action=get_care_star_xingcheng_next";
+    
+    [session GET:url parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        NSLog(@"sucess = %@",responseObject);
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+        NSLog(@"error = %@",error);
+        
+    }];
+    */
 }
 
 - (IBAction)buttonDidPress:(id)sender {
