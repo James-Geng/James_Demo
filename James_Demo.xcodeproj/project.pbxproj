@@ -10,6 +10,7 @@
 		910B11511CE06A1C00CDE5FD /* ESBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 910B11501CE06A1C00CDE5FD /* ESBaseModel.m */; };
 		913EFF431CD1EFFB00F04294 /* ESSignCalendarStatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 913EFF411CD1EFFB00F04294 /* ESSignCalendarStatisticsViewController.m */; };
 		913EFF441CD1EFFB00F04294 /* ESSignCalendarStatisticsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 913EFF421CD1EFFB00F04294 /* ESSignCalendarStatisticsViewController.xib */; };
+		915D749E1CE2DCF4004D7DFC /* ESLoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 915D749D1CE2DCF4004D7DFC /* ESLoginModel.m */; };
 		916369E31CCF19CC0057CCE8 /* weeklyTitle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 916369E21CCF19CC0057CCE8 /* weeklyTitle@2x.png */; };
 		91636A031CCF3EE90057CCE8 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 916369E61CCF3EE90057CCE8 /* NSData+Base64.m */; };
 		91636A041CCF3EE90057CCE8 /* NSDate+Hour_Minute.m in Sources */ = {isa = PBXBuildFile; fileRef = 916369E81CCF3EE90057CCE8 /* NSDate+Hour_Minute.m */; };
@@ -68,6 +69,8 @@
 		913EFF401CD1EFFB00F04294 /* ESSignCalendarStatisticsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESSignCalendarStatisticsViewController.h; sourceTree = "<group>"; };
 		913EFF411CD1EFFB00F04294 /* ESSignCalendarStatisticsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESSignCalendarStatisticsViewController.m; sourceTree = "<group>"; };
 		913EFF421CD1EFFB00F04294 /* ESSignCalendarStatisticsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ESSignCalendarStatisticsViewController.xib; sourceTree = "<group>"; };
+		915D749C1CE2DCF4004D7DFC /* ESLoginModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESLoginModel.h; sourceTree = "<group>"; };
+		915D749D1CE2DCF4004D7DFC /* ESLoginModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESLoginModel.m; sourceTree = "<group>"; };
 		916369E21CCF19CC0057CCE8 /* weeklyTitle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weeklyTitle@2x.png"; sourceTree = "<group>"; };
 		916369E51CCF3EE90057CCE8 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
 		916369E61CCF3EE90057CCE8 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
@@ -180,6 +183,7 @@
 		910B114E1CE069DD00CDE5FD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				915D749B1CE2DCE2004D7DFC /* ESLoginModel */,
 				910B114F1CE06A1C00CDE5FD /* ESBaseModel.h */,
 				910B11501CE06A1C00CDE5FD /* ESBaseModel.m */,
 			);
@@ -195,6 +199,15 @@
 				913EFF421CD1EFFB00F04294 /* ESSignCalendarStatisticsViewController.xib */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		915D749B1CE2DCE2004D7DFC /* ESLoginModel */ = {
+			isa = PBXGroup;
+			children = (
+				915D749C1CE2DCF4004D7DFC /* ESLoginModel.h */,
+				915D749D1CE2DCF4004D7DFC /* ESLoginModel.m */,
+			);
+			path = ESLoginModel;
 			sourceTree = "<group>";
 		};
 		916369E41CCF3EE90057CCE8 /* Category */ = {
@@ -531,6 +544,7 @@
 				91636A0A1CCF3EE90057CCE8 /* UIBarButtonItem+IW.m in Sources */,
 				91636A031CCF3EE90057CCE8 /* NSData+Base64.m in Sources */,
 				91636A041CCF3EE90057CCE8 /* NSDate+Hour_Minute.m in Sources */,
+				915D749E1CE2DCF4004D7DFC /* ESLoginModel.m in Sources */,
 				91636A211CCF3FD60057CCE8 /* NSString+Hashes.m in Sources */,
 				91636A241CCF3FD60057CCE8 /* UIColor+ColorWithHex.m in Sources */,
 				919388CA1CCA0E5900CEE59C /* AppDelegate.m in Sources */,
