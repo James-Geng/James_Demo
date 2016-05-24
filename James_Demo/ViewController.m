@@ -13,6 +13,10 @@
 #import "ESSignCalendarStatisticsViewController.h"
 #import "ESSignViewController.h"
 #import "AFNetworking.h"
+#import <objc/runtime.h>
+#import <YWFeedbackFMWK/YWFeedbackKit.h>
+
+//#import <AlipaySDK/AlipaySDK.h>
 
 @interface ViewController ()<ESSelectedDateAlertViewDelegate,UITableViewDelegate,UITableViewDataSource>
 
@@ -23,6 +27,9 @@
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
 
 @property (strong, nonatomic) NSMutableArray *myTableViewDataArray;
+
+@property (nonatomic, strong) YWFeedbackKit *feedbackKit;
+@property (nonatomic, assign) YWEnvironment environment;
 
 @end
 
@@ -41,7 +48,7 @@
     self.myTableViewDataArray = [NSMutableArray arrayWithObjects:@"SignCellViewController", nil];
     
     self.myTableView.tableFooterView = [[UIView alloc] init];
-    
+    /*
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     
     [dic setObject:@"1.0" forKey:@"version"];
@@ -72,8 +79,8 @@
     session.securityPolicy.validatesDomainName = NO;
     //关闭缓存避免干扰测试
     session.requestSerializer.cachePolicy = NSURLRequestReloadIgnoringLocalCacheData;
-    
-    ///*
+    */
+    /*
     [session POST:@"https://139.196.180.54/" parameters:dic progress:^(NSProgress * _Nonnull uploadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -85,7 +92,11 @@
         NSLog(@"error = %@",error);
         
     }];
-    //*/
+     
+    */
+    
+    
+    
     /*
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     //允许非权威机构颁发的证书
@@ -117,10 +128,116 @@
         
     }];
     */
+    
+    [self runTimeTest];
+    
+}
+
+-(void)aliBaiChuanTest
+{
+    self.feedbackKit = [[YWFeedbackKit alloc] initWithAppKey:@"23371534"];
+    
+    _feedbackKit.environment = YWEnvironmentRelease;
+    
+    _feedbackKit.extInfo = @{@"loginTime":[[NSDate date] description],
+                             @"visitPath":@"登陆->关于->反馈",
+                             @"应用自定义扩展信息":@"开发者可以根据需要设置不同的自定义信息，方便在反馈系统中查看"};
+    
+    _feedbackKit.customUIPlist = @{@"bgColor":@"#00bfff"};
+    
+    [self _openFeedbackViewController];
+}
+
+- (void)_openFeedbackViewController
+{
+    __weak typeof(self) weakSelf = self;
+    
+    [_feedbackKit makeFeedbackViewControllerWithCompletionBlock:^(YWFeedbackViewController *viewController, NSError *error) {
+        if ( viewController != nil ) {
+#warning 这里可以设置你需要显示的标题
+            viewController.title = @"反馈界面";
+            
+            UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:viewController];
+            [weakSelf presentViewController:nav animated:YES completion:nil];
+            
+            viewController.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"关闭" style:UIBarButtonItemStylePlain target:weakSelf action:@selector(actionQuitFeedback)];
+            
+            viewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"清除缓存" style:UIBarButtonItemStylePlain
+                                                                                              target:weakSelf action:@selector(actionCleanMemory:)];
+            
+            __weak typeof(nav) weakNav = nav;
+            
+            [viewController setOpenURLBlock:^(NSString *aURLString, UIViewController *aParentController) {
+                UIViewController *webVC = [[UIViewController alloc] initWithNibName:nil bundle:nil];
+                UIWebView *webView = [[UIWebView alloc] initWithFrame:webVC.view.bounds];
+                webView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
+                
+                [webVC.view addSubview:webView];
+                [weakNav pushViewController:webVC animated:YES];
+                [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:aURLString]]];
+            }];
+        } else {
+            NSString *title = [error.userInfo objectForKey:@"msg"]?:@"接口调用失败，请保持网络通畅！";
+            NSLog(@"alert = %@",title);
+        }
+    }];
+}
+
+- (void)actionQuitFeedback
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)actionCleanMemory:(id)sender
+{
+    [[NSURLCache sharedURLCache] removeAllCachedResponses];
+}
+
+-(void)runTimeTest
+{
+    unsigned int count;
+    //获取属性列表
+    objc_property_t *propertyList = class_copyPropertyList([self class], &count);
+    for (unsigned int i=0; i<count; i++) {
+        const char *propertyName = property_getName(propertyList[i]);
+        NSLog(@"property---->%@", [NSString stringWithUTF8String:propertyName]);
+    }
+    
+    //获取方法列表
+    Method *methodList = class_copyMethodList([self class], &count);
+    for (unsigned int i; i<count; i++) {
+        Method method = methodList[i];
+        NSLog(@"method---->%@", NSStringFromSelector(method_getName(method)));
+    }
+    
+    //获取成员变量列表
+    Ivar *ivarList = class_copyIvarList([self class], &count);
+    for (unsigned int i; i<count; i++) {
+        Ivar myIvar = ivarList[i];
+        const char *ivarName = ivar_getName(myIvar);
+        NSLog(@"Ivar---->%@", [NSString stringWithUTF8String:ivarName]);
+    }
+    
+    //获取协议列表
+    __unsafe_unretained Protocol **protocolList = class_copyProtocolList([self class], &count);
+    for (unsigned int i; i<count; i++) {
+        Protocol *myProtocal = protocolList[i];
+        const char *protocolName = protocol_getName(myProtocal);
+        NSLog(@"protocol---->%@", [NSString stringWithUTF8String:protocolName]);
+    }
+    
+    //首先定义一个全局变量，用它的地址作为关联对象的key
+    static char associatedObjectKey;
+    //设置关联对象
+    objc_setAssociatedObject(self, &associatedObjectKey, @"添加的字符串属性", OBJC_ASSOCIATION_RETAIN_NONATOMIC); //获取关联对象
+    NSString *string = objc_getAssociatedObject(self, &associatedObjectKey);
+    NSLog(@"AssociatedObject = %@", string);
 }
 
 - (IBAction)buttonDidPress:(id)sender {
     
+    [self aliBaiChuanTest];
+    return;
     ESSelectedDateAlertView *selectedDateAlertView = [[ESSelectedDateAlertView alloc] init];
     selectedDateAlertView.delegate = self;
     
