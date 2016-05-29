@@ -15,8 +15,8 @@
 #import "AFNetworking.h"
 #import <objc/runtime.h>
 #import <YWFeedbackFMWK/YWFeedbackKit.h>
-
 //#import <AlipaySDK/AlipaySDK.h>
+#import <QiniuSDK.h>
 
 @interface ViewController ()<ESSelectedDateAlertViewDelegate,UITableViewDelegate,UITableViewDataSource>
 
@@ -55,15 +55,15 @@
     
     [dic setObject:@"ios" forKey:@"os"];
     
-    [dic setObject:@"" forKey:@"uid"];
+    [dic setObject:@"12312312" forKey:@"uid"];
     
-    [dic setObject:@"" forKey:@"token"];
+    [dic setObject:@"212312313312" forKey:@"token"];
     
-    [dic setObject:@"13510802902" forKey:@"phone"];
+    //[dic setObject:@"13510802902" forKey:@"phone"];
     
-    [dic setObject:@"Keai1234" forKey:@"password"];
+    //[dic setObject:@"Keai1234" forKey:@"password"];
     
-    [dic setObject:@"user/loginbyphone" forKey:@"action"];
+    [dic setObject:@"common/uploadtoken" forKey:@"action"];
     
 //    [dic setObject:@"test/test" forKey:@"action"];
     
@@ -86,6 +86,42 @@
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         NSLog(@"sucess = %@",responseObject);
+        
+        if (responseObject) {
+            
+            NSDictionary *data = [responseObject objectForKey:@"data"];
+            
+            //NSString *token = [data objectForKey:@"uploadtoken"];
+            
+            NSString *token = @"1";
+            
+            if (token && ![token isEqualToString:@""]) {
+                
+                //NSString *token = @"从服务端SDK获取";
+                
+                QNUploadOption *opt = [[QNUploadOption alloc] initWithMime:@"text/plain" progressHandler:nil params:@{ @"x:foo":@"fooval" } checkCrc:YES cancellationSignal:nil];
+                
+                QNUploadManager *upManager = [[QNUploadManager alloc] init];
+                
+                UIImage *image = [UIImage imageNamed:@"weeklyTitle"];
+                
+                NSData *imageData = UIImageJPEGRepresentation(image, 0.1);
+                
+                //NSData *data = [@"Hello, World!" dataUsingEncoding : NSUTF8StringEncoding];
+                
+                [upManager putData:imageData key:@"i_1324122313321212" token:token
+                          complete: ^(QNResponseInfo *info, NSString *key, NSDictionary *resp) {
+                              
+                              NSLog(@"info = %@", info);
+                              
+                              NSLog(@"resp = %@", resp);
+                              
+                          } option:opt];
+                
+                
+            }
+        }
+        
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
