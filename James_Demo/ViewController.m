@@ -48,6 +48,11 @@
     self.myTableViewDataArray = [NSMutableArray arrayWithObjects:@"SignCellViewController", nil];
     
     self.myTableView.tableFooterView = [[UIView alloc] init];
+    
+    // hello, this is james captain speaking.
+    // ladies and getman, welecom to china.
+    
+    
     /*
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     
