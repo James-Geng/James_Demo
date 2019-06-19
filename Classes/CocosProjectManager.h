@@ -2,7 +2,7 @@
 //  CocosProjectManager.h
 //  libcocos2d Mac
 //
-//  Created by blizzmi_ios_001 on 2018/8/20.
+//  Created by ios_001 on 2018/8/20.
 //
 
 #import <Foundation/Foundation.h>
